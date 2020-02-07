@@ -1,0 +1,22 @@
+---
+micronaut:
+  application:
+    name: micronaut-api-server
+
+---
+micronaut:
+  security:
+    enabled: true
+    redirect:
+      enabled: false
+    endpoints:
+      login:
+        enabled: true
+      logout:
+        enabled: true
+        getAllowed: true
+    session:
+      enabled: true
+      loginSuccessTargetUrl: /status
+      loginFailureTargetUrl: /status
+      legacyRejectionHandler: false
